@@ -1,0 +1,29 @@
+#ifndef __WEB_SERVER_H__
+#define __WEB_SERVER_H__
+
+#include <ESPmDNS.h>
+#include <FS.h>
+#include <LittleFS.h>
+#include <Settings.h>
+// #include <WebServer.h>
+// #include <WiFi.h>
+// #include <WiFiClient.h>
+
+#include <AsyncTCP.h>
+#include <ESPAsyncWebServer.h>
+#include <WiFi.h>
+
+#define SETTINGS_FILE "settings"
+
+namespace MyServer {
+void init();
+
+void _info(AsyncWebServerRequest* request);
+void _setup(AsyncWebServerRequest* request);
+void _clearCredentials(AsyncWebServerRequest* request);
+// void _getState();
+void _restart(AsyncWebServerRequest* request);
+void _FORBIDDEN(AsyncWebServerRequest* request);
+}  // namespace MyServer
+
+#endif

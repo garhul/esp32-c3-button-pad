@@ -1,0 +1,33 @@
+
+#pad {  
+  width: 20vw;
+  height: 20vw;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  border:2px solid var(--borders);
+  background-color: #000;
+  border-radius:.5em;
+  box-shadow: .4em .4em .2em #00000055;
+  padding:.5em;
+}
+
+#pad > .btn {
+  border-radius: .2em;
+  border: 2px solid var(--borders);
+  cursor:pointer;
+  width:3.4vw;
+  height: 3.4vw;
+  margin:.3vw;
+  background-color: #d0d0d0;
+}
+
+#pad > .btn:hover {
+  background-color: #eee;
+  border-color:#f0f0f0;
+}
+
+#pad > .selected {
+  background-color: #fff;  
+}

@@ -1,0 +1,25 @@
+#ifndef _NETWORK_H_
+#define _NETWORK_H_
+
+#define _AP_SSID "Botonera"
+#define _SSID "Vergafone"
+#define _PASS "H1p0l1t0Pr351d3nt3"
+
+#include <WiFi.h>
+
+#define ST_CONN_TIMEOUT 10000
+#define ST_RETRIES 3
+#define WIFI_CHECK_PERIOD 180 * 1000  // Check every 3 minutes 180 000 mSec
+
+namespace Network {
+enum MODES { AP,
+             ST,
+             DISCONNECTED };
+byte getMode();
+void beginAP();
+bool beginST();
+void init();
+void checkAlive();
+}  // namespace Network
+
+#endif

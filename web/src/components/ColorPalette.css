@@ -1,0 +1,12 @@
+#colorPalette {
+  width: 50vw;
+  display:flex;
+  flex-wrap: wrap;
+}
+
+#colorPalette > span {
+  width:3vw;
+  color:hsl(261, 62%, 42%);
+  font-size:22pt;
+  cursor:pointer;
+}
